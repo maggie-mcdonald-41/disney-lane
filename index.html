@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disney Lane LLC - Travel Agency</title>
+  <style>
+    :root {
+      --deep-purple: #231942;
+      --royal-purple: #5E548E;
+      --lavender: #9F86C0;
+      --mauve: #BE95C4;
+      --blush: #E0B1CB;
+    }
+
+    body {
+      background-color: #5E548E;
+      color: var(--deep-purple);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #fafafa;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 2px solid var(--royal-purple);
+    }
+    header img {
+      max-width: 480px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1.5rem;
+    }
+    header h1 {
+      font-size: 3rem; /* previously 2.5rem */
+      font-weight: bold;
+      margin: 0.2rem 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    header p {
+      font-style: italic;
+      margin: 0.2rem 0;
+      color: var(--deep-purple);
+      font-size: 1.125rem; /* about 18px */
+      line-height: 1.6;
+    }
+    /* Paragraph text */
+p {
+  font-size: 1.125rem; /* about 18px */
+  line-height: 1.6;
+}
+#services {
+  color: #fff;
+}
+    nav {
+      background-color: #9F86C0;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+      color: var(--deep-purple);
+      font-size: 1.25rem; /* was 1.1rem */
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .container {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--deep-purple);
+      font-family: 'Georgia', serif;
+      font-size: 2rem; /* was default */
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .place-card {
+      background-color: #fff;
+      border: 2px solid var(--royal-purple);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      color: var(--deep-purple);
+    }
+    .place-card img {
+      max-width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+    .testimonials {
+      margin-top: 3rem;
+      background: #BE95C4;
+      border-left: 5px solid #fafafa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      color: var(--deep-purple);
+    }
+    .testimonial {
+      margin-bottom: 1.2rem;
+      font-style: italic;
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: var(--deep-purple);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+      font-style: italic;
+    }
+    /* Footer text */
+footer p {
+  font-size: 1rem;
+}
+    .contact {
+      background: #E0B1CB;
+      padding: 1.5rem;
+      border-left: 6px solid #fafafa;
+      border-radius: 5px;
+      color: var(--deep-purple);
+      margin: 1rem 0;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .sparkle {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      background: transparent;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,215,0,0.8) 40%, transparent 80%);
+      background-size: cover;
+      animation: sparkle 0.8s ease-out forwards;
+      transform: rotate(0deg);
+      opacity: 0.9;
+    }
+    .photo-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 3rem 0;
+  border-top: 4px solid var(--lavender);
+  border-bottom: 4px solid var(--lavender);
+  padding: 1rem 0;
+  background-color: #fafafa;
+}
+
+.carousel-track {
+  display: inline-block;
+  animation: scrollImages 30s linear infinite;
+}
+
+.carousel-track img {
+  height: 140px;
+  margin: 0 1rem;
+  border-radius: 10px;
+  border: 3px solid var(--mauve);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+@keyframes scrollImages {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+    @keyframes sparkle {
+      0% {
+        transform: scale(0.5) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(2.5) rotate(180deg);
+        opacity: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+      .place-card img {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Disney Lane LLC Logo">
+    <h1>Your Magical Travel Planner</h1>
+  </header>
+
+  <nav>
+    <a onclick="scrollToSection('contact')">Contact</a>
+    <a href="airbnb.com/h/disneylane" target="_blank">My Airbnb</a>
+    <a onclick="scrollToSection('services')">Services</a>
+  </nav>
+
+  <div class="container">
+    <section id="services">
+      <h2>🌍 Services</h2>
+      <p>I specialize in planning magical vacations to the most enchanting destinations!</p>
+
+      <div class="card-grid">
+        <div class="place-card"> <img src="images/disneyworld.png" alt="Disney World"> <h3>Disney World</h3> </div>
+        <div class="place-card"> <img src="images/disneyland.png" alt="Disneyland"> <h3>Disneyland</h3> </div>
+        <div class="place-card"> <img src="images/universal.jpg" alt="Universal Studios"> <h3>Universal Studios</h3> </div>
+        <div class="place-card"> <img src="images/seaworld.png" alt="SeaWorld"> <h3>SeaWorld</h3> </div>
+        <div class="place-card"> <img src="images/buschgardens.png" alt="Busch Gardens"> <h3>Busch Gardens</h3> </div>
+        <div class="place-card"> <img src="images/discoverycove.png" alt="Discovery Cove"> <h3>Discovery Cove</h3> </div>
+        <div class="place-card"> <img src="images/disneycruise.png" alt="Disney Cruise Line"> <h3>Disney Cruise Line</h3> </div>
+        <div class="place-card"> <img src="images/norwegian.png" alt="Norwegian Cruise Line"> <h3>Norwegian Cruise Line</h3> </div>
+        <div class="place-card"> <img src="images/carnival.png" alt="Carnival Cruise Line"> <h3>Carnival Cruise Line</h3> </div>
+      </div>
+    </section>
+
+    <section class="photo-carousel">
+      <div class="carousel-track">
+        <img src="images/woody.png" alt="Woody">
+        <img src="images/dalmation.png" alt="dalmation">
+        <img src="images/mickeypumpkin.png" alt="Mickey Pumpkin">
+        <img src="images/scotland1.png" alt="Scotland">
+        <img src="images/gretnagreen.png" alt="Gretnagreen">
+        <img src="images/route66.png" alt="Route 66">
+        <img src="images/grumpy.png" alt="Grumpy">
+        <img src="images/mountrustmore.png" alt="Mount Rustmore">
+        <img src="images/pug.png" alt="Pug">
+        <img src="images/scotland2.png" alt="Scotland 2">
+        <img src="images/Scotland3.png" alt="Scotland 3">
+        <img src="images/castlefireworks.png" alt="Disney World Fireworks">
+        <img src="images/disneylanebench.png" alt="Disney Lane Bench">
+        <img src="images/disneylanejukebox.png" alt="Disney Lane jukebox">
+        <img src="images/disneylanehp.png" alt="Disney Lane Harry Potter room">
+        <img src="images/divehelmets.png" alt="Dive Helemets">
+        <img src="images/lady.png" alt="lady">
+        <img src="images/disneycruiseboat.png" alt="Disney Cruise">
+        <img src="images/nightcastle.png" alt="Night Castle">
+        <img src="images/disneylanepool.png" alt="Disney Lane Pool">
+        <img src="images/disneycastlehalloween.png" alt="Disney Castle Halloween">
+        <img src="images/disneycaliforniaadventure.png" alt="Disney California Adventure">
+        <img src="images/r2d2.png" alt="R2D2">
+        <img src="images/disneylanetable.png" alt="Disney Lane Table">
+        <img src="images/flynn.png" alt="Flyn">
+        <img src="images/californiasmallworld.png" alt="Califronia Small World">
+        <img src="images/disneychristmascastle.png" alt="Disney Christmas Castle">
+        <img src="images/parrot.png" alt="Parrot">
+        <img src="images/disneychristmascastle.png" alt="Disney Christmas Castle">
+        <img src="images/disneylanehp2.png" alt="Disney Lane Hp2">
+        <img src="images/pooh.png" alt="Pooh">
+        <img src="images/hauntedmansion.png" alt="Haunted Mansion">
+        <img src="images/rollercoaster.png" alt="Roller Coaster">
+        <img src="images/highlandcow.png" alt="Highland Cow">
+        <img src="images/ladyandtramp.png" alt="Lady and Tramp">
+      </div>
+    </section>
+    
+
+    <section class="testimonials">
+      <h2>💬 What Our Clients Say</h2>
+      <div class="testimonial">"Everything was planned perfectly and we had the most magical vacation ever!" – The Smith Family</div>
+      <div class="testimonial">"Stress-free and so fun. Highly recommend Disney Lane for all your travel needs!" – Jordan R.</div>
+      <div class="testimonial">"Loved the cruise they booked for us. The kids had a blast!" – Monica T.</div>
+      <div class="testimonial">"Thank you! We had such a great stay! We loved all the little touches and easter eggs throughout the house and our daughter loved finding "hidden Mickeys"
+        This house had an awesome set up, both dog and kid friendly. We will highly recommend this house to friend and plan to stay again!"" From Massachusetts </div>
+      <div class="testimonial">"Thank you so much! We absolutely loved staying here! The kids a had a blast with the games in the garage and the pool. The dog room was perfect for our dog. We loved all the little details and easter eggs around the house. We'll definitely be back." -From Florida</div>
+      <div class="testimonial">"Thanks for a wonderful week. What a lovely home!! The kids loved the pool and all of the Disney touches. They had know idea what a jukebox was! We liked it so much!" - From  Illinois</div>
+      <div class="testimonial">"Had a great time!  It is obvious you put a lot of love and special touches in the home. Our kids enjoyed the game room and pool. Us adults enjoyed the jukebox and popcorn machine. We will definitely stay here again." - From Georgia</div>
+      <div class="testimonial">"We had the most magical time! Thank you for all of your help and advice!" - From Georgia</div>
+      <div class="testimonial">"DIsney was amazing! Thank you so much for everything! None of this would be possible without you!" - From South Carolina</div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2>📞 Contact Information</h2>
+
+        <p><strong>Email:</strong> disneylane@outlook.com</p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/disneylane_llc?igsh=MWw5eDl0bWJkcGxzdA%3D%3D&utm_source=qr" target="_blank">@disneylanellc</a></p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1AwDoGxdST/?mibextid=wwXIfr" target="_blank">@disneylanellc</a></p>
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Disney Lane LLC. All rights reserved.</p>
+    <p>✨ Have a magical day! ✨</p>
+  </footer>
+
+  <script>
+    function sparkleEffect(x, y) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = `${x - 12}px`;
+      sparkle.style.top = `${y - 12}px`;
+      sparkle.style.position = 'absolute';
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 800);
+    }
+
+    document.body.addEventListener('click', (e) => {
+      sparkleEffect(e.pageX, e.pageY);
+    });
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
