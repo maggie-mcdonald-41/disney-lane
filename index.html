@@ -3,300 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disney Lane LLC - Travel Agency</title>
-  <style>
-    :root {
-      --deep-purple: #231942;
-      --royal-purple: #5E548E;
-      --lavender: #9F86C0;
-      --mauve: #BE95C4;
-      --blush: #E0B1CB;
-    }
-
-    body {
-      background-color: #5E548E;
-      color: var(--deep-purple);
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #fafafa;
-      text-align: center;
-      padding: 3rem 1rem;
-      border-bottom: 2px solid var(--royal-purple);
-    }
-    header img {
-      max-width: 480px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 1.5rem;
-    }
-    header h1 {
-      font-size: 3rem; /* previously 2.5rem */
-      font-weight: bold;
-      margin: 0.2rem 0;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    header p {
-      font-style: italic;
-      margin: 0.2rem 0;
-      color: var(--deep-purple);
-      font-size: 1.125rem; /* about 18px */
-      line-height: 1.6;
-    }
-    /* Paragraph text */
-p {
-  font-size: 1.125rem; /* about 18px */
-  line-height: 1.6;
-}
-#services {
-  color: #fff;
-}
-    nav {
-      background-color: #9F86C0;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0.5rem;
-      display: inline-block;
-      text-decoration: none;
-      color: var(--deep-purple);
-      font-size: 1.25rem; /* was 1.1rem */
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .container {
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 {
-      color: var(--deep-purple);
-      font-family: 'Georgia', serif;
-      font-size: 2rem; /* was default */
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .place-card {
-      background-color: #fff;
-      border: 2px solid var(--royal-purple);
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      cursor: pointer;
-      color: var(--deep-purple);
-    }
-    .place-card img {
-      max-width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 0.75rem;
-    }
-    .testimonials {
-      margin-top: 3rem;
-      background: #BE95C4;
-      border-left: 5px solid #fafafa;
-      padding: 1.5rem;
-      border-radius: 10px;
-      color: var(--deep-purple);
-    }
-    .testimonial {
-      margin-bottom: 1.2rem;
-      font-style: italic;
-      font-size: 1.125rem;
-      line-height: 1.5;
-    }
-    footer {
-      background-color: var(--deep-purple);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
-      font-style: italic;
-    }
-    /* Footer text */
-footer p {
-  font-size: 1rem;
-}
-    .contact {
-      background: #E0B1CB;
-      padding: 1.5rem;
-      border-left: 6px solid #fafafa;
-      border-radius: 5px;
-      color: var(--deep-purple);
-      margin: 1rem 0;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .sparkle {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      pointer-events: none;
-      background: transparent;
-      background-image: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,215,0,0.8) 40%, transparent 80%);
-      background-size: cover;
-      animation: sparkle 0.8s ease-out forwards;
-      transform: rotate(0deg);
-      opacity: 0.9;
-    }
-    .photo-carousel {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 3rem 0;
-  border-top: 4px solid var(--lavender);
-  border-bottom: 4px solid var(--lavender);
-  padding: 1rem 0;
-  background-color: #fafafa;
-}
-
-.carousel-track {
-  display: inline-block;
-  animation: scrollImages 30s linear infinite;
-}
-
-.carousel-track img {
-  height: 140px;
-  margin: 0 1rem;
-  border-radius: 10px;
-  border: 3px solid var(--mauve);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-@keyframes scrollImages {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-    @keyframes sparkle {
-      0% {
-        transform: scale(0.5) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(2.5) rotate(180deg);
-        opacity: 0;
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-        font-size: 1rem;
-      }
-      .container {
-        padding: 1rem;
-      }
-      .place-card img {
-        height: 120px;
-      }
-    }
-  </style>
+  <title>Disney Lane Getaway</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Disney Lane LLC Logo">
-    <h1>Your Magical Travel Planner</h1>
-  </header>
 
-  <nav>
-    <a onclick="scrollToSection('contact')">Contact</a>
-    <a href="https://airbnb.com/h/disneylane" target="_blank">My Airbnb</a>
-    <a onclick="scrollToSection('services')">Services</a>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Disney Lane Getaway</a>
+      <ul class="nav-links">
+        <li><a href="https://airbnb.com/h/disneylane" target="_blank">My Airbnb</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#accommodations">Rooms</a></li>
+        <li><a href="#location">Location</a></li>        
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <div class="container">
-    <section id="services">
-      <h2>🌍 Services</h2>
-      <p>I specialize in planning magical vacations to the most enchanting destinations!</p>
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="images/logo.png" alt="Disney Lane LLC Logo">
+    <h1>Welcome to Disney Lane Getaway</h1>
+    <p>A magical family-friendly retreat just minutes from Disney World — complete with a private pool, themed rooms, and hidden surprises for guests of all ages.</p>
+    <a href="#booking" class="cta-button">Check Availability</a>
+  </header>
 
-      <div class="card-grid">
-        <div class="place-card"> <img src="images/disneyworld.png" alt="Disney World"> <h3>Disney World</h3> </div>
-        <div class="place-card"> <img src="images/disneyland.png" alt="Disneyland"> <h3>Disneyland</h3> </div>
-        <div class="place-card"> <img src="images/universal.jpg" alt="Universal Studios"> <h3>Universal Studios</h3> </div>
-        <div class="place-card"> <img src="images/seaworld.png" alt="SeaWorld"> <h3>SeaWorld</h3> </div>
-        <div class="place-card"> <img src="images/buschgardens.png" alt="Busch Gardens"> <h3>Busch Gardens</h3> </div>
-        <div class="place-card"> <img src="images/discoverycove.png" alt="Discovery Cove"> <h3>Discovery Cove</h3> </div>
-        <div class="place-card"> <img src="images/disneycruise.png" alt="Disney Cruise Line"> <h3>Disney Cruise Line</h3> </div>
-        <div class="place-card"> <img src="images/norwegian.png" alt="Norwegian Cruise Line"> <h3>Norwegian Cruise Line</h3> </div>
-        <div class="place-card"> <img src="images/carnival.png" alt="Carnival Cruise Line"> <h3>Carnival Cruise Line</h3> </div>
-      </div>
-    </section>
+  <!-- Introduction Section -->
+  <section class="intro">
+    <h2>💫 Make Core Memories</h2>
+    <p>We’re Doc &amp; Lady, proud grandparents to 10, and your hosts at Disney Lane. Our home is made for memory-making — with room for the whole family (including your furry friends), immersive themed bedrooms, a private pool and spa, and even a vintage jukebox. Whether you're here for the magic, the sunshine, or the rest and relaxation, we’ve got you covered.</p>
+  </section>
 
-    <section class="photo-carousel">
-      <div class="carousel-track">
-        <img src="images/woody.png" alt="Woody">
-        <img src="images/dalmation.png" alt="dalmation">
-        <img src="images/mickeypumpkin.png" alt="Mickey Pumpkin">
-        <img src="images/scotland1.png" alt="Scotland">
-        <img src="images/gretnagreen.png" alt="Gretnagreen">
-        <img src="images/route66.png" alt="Route 66">
-        <img src="images/grumpy.png" alt="Grumpy">
-        <img src="images/mountrustmore.png" alt="Mount Rustmore">
-        <img src="images/pug.png" alt="Pug">
-        <img src="images/scotland2.png" alt="Scotland 2">
-        <img src="images/Scotland3.png" alt="Scotland 3">
-        <img src="images/castlefireworks.png" alt="Disney World Fireworks">
-        <img src="images/disneylanebench.png" alt="Disney Lane Bench">
-        <img src="images/disneylanejukebox.png" alt="Disney Lane jukebox">
-        <img src="images/disneylanehp.png" alt="Disney Lane Harry Potter room">
-        <img src="images/divehelmets.png" alt="Dive Helemets">
-        <img src="images/lady.png" alt="lady">
-        <img src="images/disneycruiseboat.png" alt="Disney Cruise">
-        <img src="images/nightcastle.png" alt="Night Castle">
-        <img src="images/disneylanepool.png" alt="Disney Lane Pool">
-        <img src="images/disneycastlehalloween.png" alt="Disney Castle Halloween">
-        <img src="images/disneycaliforniaadventure.png" alt="Disney California Adventure">
-        <img src="images/r2d2.png" alt="R2D2">
-        <img src="images/disneylanetable.png" alt="Disney Lane Table">
-        <img src="images/flynn.png" alt="Flyn">
-        <img src="images/californiasmallworld.png" alt="Califronia Small World">
-        <img src="images/disneychristmascastle.png" alt="Disney Christmas Castle">
-        <img src="images/parrot.png" alt="Parrot">
-        <img src="images/disneychristmascastle.png" alt="Disney Christmas Castle">
-        <img src="images/disneylanehp2.png" alt="Disney Lane Hp2">
-        <img src="images/pooh.png" alt="Pooh">
-        <img src="images/hauntedmansion.png" alt="Haunted Mansion">
-        <img src="images/rollercoaster.png" alt="Roller Coaster">
-        <img src="images/highlandcow.png" alt="Highland Cow">
-        <img src="images/ladyandtramp.png" alt="Lady and Tramp">
-      </div>
-    </section>
-    
 
-    <section class="testimonials">
-      <h2>💬 What Our Clients Say</h2>
-      <div class="testimonial">"Everything was planned perfectly and we had the most magical vacation ever!" – The Smith Family</div>
-      <div class="testimonial">"Stress-free and so fun. Highly recommend Disney Lane for all your travel needs!" – Jordan R.</div>
-      <div class="testimonial">"Loved the cruise they booked for us. The kids had a blast!" – Monica T.</div>
-      <div class="testimonial">"Thank you! We had such a great stay! We loved all the little touches and easter eggs throughout the house and our daughter loved finding "hidden Mickeys"
-        This house had an awesome set up, both dog and kid friendly. We will highly recommend this house to friend and plan to stay again!"" From Massachusetts </div>
-      <div class="testimonial">"Thank you so much! We absolutely loved staying here! The kids a had a blast with the games in the garage and the pool. The dog room was perfect for our dog. We loved all the little details and easter eggs around the house. We'll definitely be back." -From Florida</div>
-      <div class="testimonial">"Thanks for a wonderful week. What a lovely home!! The kids loved the pool and all of the Disney touches. They had know idea what a jukebox was! We liked it so much!" - From  Illinois</div>
-      <div class="testimonial">"Had a great time!  It is obvious you put a lot of love and special touches in the home. Our kids enjoyed the game room and pool. Us adults enjoyed the jukebox and popcorn machine. We will definitely stay here again." - From Georgia</div>
-      <div class="testimonial">"We had the most magical time! Thank you for all of your help and advice!" - From Georgia</div>
-      <div class="testimonial">"DIsney was amazing! Thank you so much for everything! None of this would be possible without you!" - From South Carolina</div>
-    </section>
+<!-- Updated Photo Gallery Section -->
+<section id="photos" class="photo-gallery">
+  <h2>📸 Peek Inside the Getaway</h2>
 
+  <h3>🏠 Exterior & Entry</h3>
+<div class="gallery-grid">
+  <img src="images/disneylane.jpg" alt="Front of house with lush landscaping">
+  <img src="images/poolspanight.jpg" alt="Private pool and spa at sunset">
+  <img src="images/conservatory.jpg" alt="Backyard conservatory">
+</div>
+
+<h3>🛋 Living Areas</h3>
+<div class="gallery-grid">
+  <img src="images/greatroom.jpg" alt="Spacious living room with mounted TV">
+  <img src="images/movieloftscreen2.jpg" alt="Movie loft room with 98' television">
+  <img src="images/movieloft.jpg" alt="Movie loft room with table">
+</div>
+
+<h3>🍽 Kitchen & Dining</h3>
+<div class="gallery-grid">
+  <img src="images/intokitchen.jpg" alt="Fully stocked kitchen with island seating">
+  <img src="images/diningarea.jpg" alt="Dining table with seating for ten">
+  <img src="images/dishes.JPG" alt="Plenty of Dishes">
+</div>
+
+<h3>🎉 Extras & Amenities</h3>
+<div class="gallery-grid">
+  <img src="images/gameroom.jpg" alt="Diner-style game room with jukebox and games">
+  <img src="images/petspace.jpg" alt="Dog room with cozy bed and play space">
+  <img src="images/laundry.jpg" alt="Laundry Room">
+</div>
+
+<h2>🛏 Themed Bedrooms</h2>
+
+<h3>🧚 Peter Pan Room</h3>
+<div class="gallery-grid">
+  <img src="images/peterpanmaster.jpg" alt="Peter Pan themed king bedroom with crib">
+  <img src="images/peterpanmaster2.jpg" alt="Close-up of Peter Pan decor and crib">
+  <img src="images/peterpanbath.JPG" alt="Peter Pan Bathroom">
+</div>
+
+<h3>🎨 Tangled Room</h3>
+<div class="gallery-grid">
+  <img src="images/tangledroom.jpg" alt="Tangled themed bedroom with artwork and cozy bed">
+  <img src="images/tangledroom2.jpg" alt="Tangled room bed with themed bedding">
+  <img src="images/tangledbath.jpg" alt="Tangled bathroom">
+</div>
+
+<h3>🧙‍♂️ Harry Potter Room</h3>
+<div class="gallery-grid">
+  <img src="images/93quarters.JPG" alt="Platform 9 3/4">
+  <img src="images/harrypotterknightbus.jpg" alt="Triple-decker Harry Potter bunk bed">
+  <img src="images/harrypotter.jpg" alt="Harry Potter artwork">
+</div>
+
+<h3>🐾 Disney Dogs Room</h3>
+<div class="gallery-grid">
+  <img src="images/welcome.JPG" alt="Disney Dog welcome">
+  <img src="images/disneydogs.jpg" alt="Disney Dogs room with bunk bed and toddler bed">
+  <img src="images/disneydogs2.jpg" alt="Close-up of Disney dog decor and plush toys">
+</div>
+
+<h3>🏠 Mickey Master on Main</h3>
+<div class="gallery-grid">
+  <img src="images/mainfloormaster.jpg" alt="Main floor Master Bedroom">
+  <img src="images/masterbath.jpg" alt="Master bathroom">
+  <img src="images/mainfloorcrib.jpg" alt="Main floor crib">
+</div>
+
+  <p><a href="https://airbnb.com/h/disneylane" target="_blank">See full photo gallery on Airbnb →</a></p>
+</section>
+
+ <!-- Accommodations Section -->
+  <section id="accommodations" class="accommodations">
+    <h2>🛏 Room for Everyone</h2>
+    <ul>
+      <li>🏠 5 Bedrooms | 4.5 Bathrooms | Sleeps 10 + 2 Cribs</li>
+      <li>👶 2 King Suites with Cribs &amp; Changing Tables</li>
+      <li>🧚 Tangled King Room</li>
+      <li>🧙‍♂️ Harry Potter Triple-Decker Bunk</li>
+      <li>🐶 Disney Dogs Room with Toddler Bed</li>
+      <li>🎮 Game Room with Vintage Jukebox</li>
+      <li>🏊‍♂️ Private Pool &amp; Spa</li>
+    </ul>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="location">
+    <h2>📍 Near the Magic</h2>
+    <table>
+      <tr><td>Magic Kingdom</td><td>14 miles</td></tr>
+      <tr><td>Epcot</td><td>14 miles</td></tr>
+      <tr><td>Hollywood Studios</td><td>12.5 miles</td></tr>
+      <tr><td>Animal Kingdom</td><td>12.5 miles</td></tr>
+      <tr><td>Disney Springs</td><td>15 miles</td></tr>
+      <tr><td>Universal Studios</td><td>22 miles</td></tr>
+      <tr><td>Sea World</td><td>17.5 miles</td></tr>
+      <tr><td>Orlando Intl. Airport</td><td>30 miles</td></tr>
+    </table>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <h2>🌟 What Guests Are Saying</h2>
+    <blockquote>
+      “Beautiful place. Very spacious and well laid out for multiple families. Great communication too — replied within a few minutes!!”
+      <footer>— Justin, July 2025</footer>
+    </blockquote>
+    <blockquote>
+      “This place was the most amazing family vacation we have ever had! So extremely kid friendly! The pool & hot tub is amazing. Everything about this place is just amazing. 10000/10.”
+      <footer>— Kerri, April 2025</footer>
+    </blockquote>
+    <blockquote>
+      “Laura’s place was just what we needed for a relaxing stay that kept the kids entertained. From the pool to the arcade to the massive TV upstairs, we had plenty to do without having to leave the house.”
+      <footer>— Priscilla, March 2025</footer>
+    </blockquote>
+    <p><a href="https://airbnb.com/h/disneylane" target="_blank">Read more 5-star reviews on Airbnb →</a></p>
+  </section>
+
+
+
+  <!-- Rates Section -->
+  <section id="rates" class="rates">
+    <h2>💸 Clear Rates &amp; Extras</h2>
+    <p><strong>Fixed Costs:</strong></p>
+    <ul>
+      <li>Nightly Rate × Nights</li>
+      <li>$250 Cleaning Fee</li>
+      <li>$40 Admin Fee</li>
+    </ul>
+    <p><strong>Optional Add-Ons:</strong></p>
+    <ul>
+      <li>Pet Fee – $240</li>
+      <li>Heated Spa – $40/night (3 night min)</li>
+      <li>Grill Rental – $30</li>
+      <li>Resort Amenities – $45 total</li>
+    </ul>
+  </section>
+
+  <!-- Booking Section: put calendar here in future -->
+  <section id="booking" class="booking">
+    <h2>📅 Ready to Book?</h2>
+    <p>Click below to view availability and reserve your stay on Airbnb:</p>
+    <a href="https://airbnb.com/h/disneylane" target="_blank" class="cta-button">Book Now on Airbnb</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>👋 Meet Your Hosts</h2>
+    <p>We’re Doc and Lady, childhood sweethearts turned grandparents to 10 wonderful grands. Our home is built for joyful chaos, family dinners, and magical memories. Whether it's your first visit or your fiftieth, we can't wait to share our little piece of happiness with you.</p>
+  </section>
     <section id="contact">
       <div class="contact">
         <h2>📞 Contact Information</h2>
@@ -309,29 +203,42 @@ footer p {
     </section>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Disney Lane LLC. All rights reserved.</p>
-    <p>✨ Have a magical day! ✨</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Disney Lane Getaway. All rights reserved.</p>
+        <p>✨ Have a magical day! ✨</p>
   </footer>
 
-  <script>
-    function sparkleEffect(x, y) {
-      const sparkle = document.createElement('div');
-      sparkle.className = 'sparkle';
-      sparkle.style.left = `${x - 12}px`;
-      sparkle.style.top = `${y - 12}px`;
-      sparkle.style.position = 'absolute';
-      document.body.appendChild(sparkle);
-      setTimeout(() => sparkle.remove(), 800);
-    }
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
 
-    document.body.addEventListener('click', (e) => {
-      sparkleEffect(e.pageX, e.pageY);
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  document.querySelectorAll(".gallery-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
     });
+  });
 
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  lightboxClose.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+      lightboxImg.src = "";
     }
-  </script>
+  });
+</script>
+
 </body>
 </html>
