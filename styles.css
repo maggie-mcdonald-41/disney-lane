@@ -140,6 +140,7 @@ section table td {
 
 .nav-links a:hover {
   text-decoration: underline;
+  color: var(--soft-pink);
 }
 
 /* Hero */
