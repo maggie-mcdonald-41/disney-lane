@@ -273,6 +273,21 @@ max-width: 300px;
   text-decoration: underline;
 }
 
+.host-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.host-photo {
+  width: 250px;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
 /* Footer */
 .footer {
