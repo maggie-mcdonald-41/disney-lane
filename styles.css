@@ -208,6 +208,28 @@ max-width: 300px;
   color: var(--deep-red);
 }
 
+/*links*/
+.contact-links p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.contact-links i {
+  color: #6c5ce7;
+  margin-right: 6px;
+}
+
+.contact-links a {
+  color: #0984e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+
 /* Footer */
 .footer {
   background: var(--charcoal-plum);
