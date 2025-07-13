@@ -14,7 +14,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--soft-pink);
+  background: #dceed1;
   color: var(--text-dark);
   line-height: 1.6;
   text-align: center;
