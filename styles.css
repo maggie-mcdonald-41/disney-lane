@@ -166,6 +166,12 @@ max-width: 700px;
     color: #ffff;
 }
 
+.superhost-badge {
+  width: 800px;
+  margin:  auto;
+  display: block;
+}
+
 .cta-button {
   display: inline-block;
   background: var(--deep-red);
@@ -180,6 +186,32 @@ max-width: 700px;
 
 .cta-button:hover {
   background: var(--charcoal-plum);
+}
+
+.superhost-mini {
+  width: 400px;
+  margin: auto;
+}
+.superhost-info {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 18px 22px;
+  background: var(--charcoal-plum);
+  border-left: 6px solid var(--deep-red);
+  border-radius: 14px;
+  color: var(--text-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.superhost-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--soft-pink);
+}
+
+.superhost-info p {
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* Gallery Grid */
@@ -301,6 +333,19 @@ max-width: 700px;
   border-radius: 1rem;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.family-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.family-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 /* Footer */
